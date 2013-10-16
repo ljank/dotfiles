@@ -25,7 +25,6 @@
 		80,
 		99
 	],
-	"search_in_project_engine": "ag",
 	"shift_tab_unindent": true,
 	"soda_classic_tabs": true,
 	"theme": "Soda Dark 3.sublime-theme",

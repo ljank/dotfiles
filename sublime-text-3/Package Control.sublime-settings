@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"ChangeQuotes",
 		"Git",
 		"GitGutter",
 		"SideBarEnhancements",

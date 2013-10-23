@@ -1,5 +1,5 @@
 {
-	"animation_enabled": false,
+	"animation_enabled": true,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":

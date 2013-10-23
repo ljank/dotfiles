@@ -6,5 +6,8 @@
     { "keys": ["f2"], "command": "side_bar_rename" },
     { "keys": ["super+'"], "command": "change_quotes" },
     { "keys": ["enter"], "command": "next_result", "context": [
-        {"key": "selector", "operator": "equal", "operand": "text.find-in-files" }]}
+        {"key": "selector", "operator": "equal", "operand": "text.find-in-files" }]},
+    { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 5.0} },
+    { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -5.0} },
 ]

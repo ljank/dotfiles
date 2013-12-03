@@ -32,6 +32,9 @@ if [[ -e $SUBLIME_PATH ]]; then
     echo 'Package Control installed.'
   fi
 
+  echo "Enabling keyhold"
+  defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
   echo "Sublime configured."
 else
   echo "[Warn] Sublime not installed!"

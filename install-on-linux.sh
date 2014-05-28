@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOT_HOME="$HOME/dotfiles"
-SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
+SUBLIME_PATH="$HOME/.config/sublime-text-3"
 
 WGET=`which wget`
 GIT=`which git`
@@ -31,9 +31,6 @@ if [[ -e $SUBLIME_PATH ]]; then
     $WGET "https://sublime.wbond.net/Package%20Control.sublime-package" -O "$PACKAGE_CONTROL_PKG"
     echo 'Package Control installed.'
   fi
-
-  echo "Enabling keyhold"
-  defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
   echo "Sublime configured."
 else

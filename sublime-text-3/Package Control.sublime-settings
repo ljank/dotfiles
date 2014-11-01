@@ -2,12 +2,16 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"BracketHighlighter",
 		"ChangeQuotes",
+		"Enhanced Clojure",
 		"Git",
 		"GitGutter",
+		"lispindent",
 		"LiveStyle",
 		"Rake",
 		"SideBarEnhancements",
+		"SublimeREPL",
 		"Theme - Soda"
 	]
 }

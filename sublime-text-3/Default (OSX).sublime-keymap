@@ -10,4 +10,31 @@
     { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 5.0} },
     { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -5.0} },
+    { "keys": ["command+o"], "command": "goto_definition" },
+
+     // SublimeREPL bindings:
+     // =====================
+    { "keys": ["super+enter"], "command": "repl_transfer_current", "args": {"scope": "block"}},
+    { "keys": ["super+shift+enter"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
+    { "keys": ["alt+super+r"], "command": "refresh_namespaces_in_repl"},
+    { "keys": ["alt+super+i"], "command": "switch_to_current_namespace_in_repl"},
+    { "keys": ["alt+super+x"], "command": "run_clojure_tests_from_current_namespace_in_repl"},
+    { "keys": ["alt+super+a"], "command": "run_all_clojure_tests_from_project_in_repl"},
+
+    // BracketHighlighter bindings:
+    // ===========================
+    // Swap bracket type
+    { "keys": ["ctrl+shift+]"], "command": "swap_brackets"},
+
+    // Swap quotes (only goes boths ways in supported languages...)
+    { "keys": ["ctrl+shift+'"], "command": "bh_key", "args": {"lines" : true, "plugin": {"type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"], "command": "bh_modules.swapquotes"} }},
+
+    // Select text between brackets
+    { "keys": ["ctrl+alt+a"], "command": "bh_key", "args": {"lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect"} } },
+
+    // Select tag name of HTML/XML tag (both opening name and closing)
+    { "keys": ["ctrl+alt+t"], "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect"} } },
+
+    // Toggle high visibility mode
+    { "keys": ["alt+super+="], "command": "bh_toggle_high_visibility"},
 ]

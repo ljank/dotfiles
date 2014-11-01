@@ -20,18 +20,19 @@
 	[
 		"LiveStyle"
 	],
+	"match_brackets": false,
 	"rulers":
 	[
 		75,
 		80,
 		99
 	],
+	"save_on_focus_lost": true,
 	"shift_tab_unindent": true,
 	"soda_classic_tabs": true,
 	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_ctrl_keys": true,
-	"vintage_start_in_command_mode": true,
-	"save_on_focus_lost": true
+	"vintage_start_in_command_mode": true
 }

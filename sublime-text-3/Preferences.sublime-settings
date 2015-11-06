@@ -11,7 +11,10 @@
 		"tmp",
 		"log",
 		".zeus.sock",
-		"spec/reports"
+		"spec/reports",
+		"build",
+		"target",
+		"out"
 	],
 	"font_face": "Monaco",
 	"font_size": 14.0,

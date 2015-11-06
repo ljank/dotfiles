@@ -17,7 +17,7 @@ class SwitchToCurrentNamespaceInReplCommand(SublimeREPL.text_transfer.ReplTransf
   def run(self, edit):
     if SublimeREPL.sublimerepl.manager.repl_view(self.view):
       return
-    ns = re.sub("ns\s*", "", self.view.substr(self.view.find("ns\s*\S+",0)))
+    ns = re.split("ns", self.view.substr(self.view.find("ns\s*\S+",0)), 1)[1].strip()
     text = "(in-ns '" + ns + ")"
     self.view.window().run_command("repl_send", {"external_id": self.repl_external_id(), "text": text})
 
@@ -31,7 +31,7 @@ class RunClojureTestsFromCurrentNamespaceInReplCommand(SublimeREPL.text_transfer
   def run(self, edit):
     if SublimeREPL.sublimerepl.manager.repl_view(self.view):
       return
-    ns = re.sub("ns\s*", "", self.view.substr(self.view.find("ns\s*\S+",0)))
+    ns = re.split("ns", self.view.substr(self.view.find("ns\s*\S+",0)), 1)[1].strip()
 
     default_test_ns = re.sub("(.*)(?<!-test)\\Z","\\1-test", ns, 1)
     alt_style_test_ns = re.sub("\A([^\\.]*\\.)(?!test)","\\1test.", ns, 1)

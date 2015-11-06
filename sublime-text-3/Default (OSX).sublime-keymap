@@ -37,4 +37,7 @@
 
     // Toggle high visibility mode
     { "keys": ["alt+super+="], "command": "bh_toggle_high_visibility"},
+
+    { "keys": ["ctrl+shift+d"], "command": "table_editor_delete_column"},
+    { "keys": ["ctrl+shift+a"], "command": "table_editor_insert_column"}
 ]

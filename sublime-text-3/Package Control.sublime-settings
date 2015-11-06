@@ -4,6 +4,7 @@
 		"All Autocomplete",
 		"BracketHighlighter",
 		"ChangeQuotes",
+		"Cucumber",
 		"Enhanced Clojure",
 		"Git",
 		"GitGutter",
@@ -12,6 +13,7 @@
 		"Rake",
 		"SideBarEnhancements",
 		"SublimeREPL",
-		"Theme - Soda"
+		"Theme - Soda",
+		"Table Editor"
 	]
 }

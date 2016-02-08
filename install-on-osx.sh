@@ -32,6 +32,10 @@ if [[ -e $SUBLIME_PATH ]]; then
     echo 'Package Control installed.'
   fi
 
+  echo 'Adding `sublime` alias..'
+  mkdir -pv "$HOME/bin"
+  ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "$HOME/bin/sublime"
+
   echo "Enabling keyhold"
   defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 

@@ -21,7 +21,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"LiveStyle"
+		"LiveStyle",
+		"Vintage"
 	],
 	"match_brackets": false,
 	"rulers":

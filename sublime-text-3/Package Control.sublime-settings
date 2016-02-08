@@ -10,10 +10,11 @@
 		"GitGutter",
 		"lispindent",
 		"LiveStyle",
+		"Package Control",
 		"Rake",
 		"SideBarEnhancements",
 		"SublimeREPL",
-		"Theme - Soda",
-		"Table Editor"
+		"Table Editor",
+		"Theme - Soda"
 	]
 }

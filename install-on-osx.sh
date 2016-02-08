@@ -48,6 +48,7 @@ BASH_PROFILE_PATH=~/.bash_profile
 BASH_CONFIGURED=`cat $BASH_PROFILE_PATH | grep '^# dotfiles'`
 if [[ $? -ne 0 ]]; then
   echo 'Configuring Bash..'
+  brew install bash-completion
   echo '' >> $BASH_PROFILE_PATH
   echo '# dotfiles' >> $BASH_PROFILE_PATH
   for bash_config in $DOT_HOME/bash/*.bash; do

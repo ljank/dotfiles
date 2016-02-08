@@ -55,4 +55,10 @@ else
 fi
 
 
+echo "Configuring Git.."
+rm -v "$HOME/.gitconfig"
+ln -sv "$DOT_HOME/git/config" "$HOME/.gitconfig"
+echo "Git configured."
+
+
 echo "Done!"

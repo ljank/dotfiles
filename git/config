@@ -1,0 +1,28 @@
+[credential]
+    helper = osxkeychain
+[user]
+    name = Lech Jankovski
+    email = godgard+github@gmail.com
+[help]
+    autocorrect = 1
+[color]
+    ui = true
+    branch = true
+    diff = true
+    grep = true
+    interactive = true
+    pager = true
+    status = true
+    show-branch = true
+[diff]
+    noprefix = true
+[alias]
+    ci = commit
+    co = checkout
+    d = diff
+    st = status -sb
+    br = branch
+    cp = cherry-pick
+    undo-commit = reset --soft HEAD^
+[push]
+    default = current

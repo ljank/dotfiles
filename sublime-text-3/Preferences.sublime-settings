@@ -1,6 +1,6 @@
 {
 	"animation_enabled": false,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -33,8 +33,9 @@
 	],
 	"save_on_focus_lost": true,
 	"shift_tab_unindent": true,
+	"show_definitions": false,
 	"soda_classic_tabs": true,
-	"theme": "Soda Dark 3.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_ctrl_keys": true,

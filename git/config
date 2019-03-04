@@ -16,10 +16,11 @@
     show-branch = true
 [diff]
     noprefix = true
+    compactionheuristic = true
 [alias]
     ci = commit
     co = checkout
-    d = diff
+    dw = diff --color-words
     st = status -sb
     br = branch
     cp = cherry-pick

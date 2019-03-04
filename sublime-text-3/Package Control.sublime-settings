@@ -1,10 +1,16 @@
 {
 	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"All Autocomplete",
+		"Better CoffeeScript",
 		"BracketHighlighter",
 		"ChangeQuotes",
+		"Color Highlight",
 		"Column Select",
 		"Crystal",
 		"Cucumber",
@@ -12,12 +18,17 @@
 		"Git",
 		"GitGutter",
 		"Gradle_Language",
+		"JSX",
 		"lispindent",
 		"LiveStyle",
+		"Material Theme",
 		"Package Control",
 		"Rake",
 		"RSpec",
 		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
 		"SublimeREPL",
 		"Table Editor",
 		"Theme - Soda"

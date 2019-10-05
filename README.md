@@ -1,17 +1,13 @@
 My personal dotfiles
 ========
 
-Installing on Mac OS X
+Installation
 --------
 
-    curl https://raw.githubusercontent.com/ljank/dotfiles/master/install-on-osx.sh | sh
-
-Installing on Linux
---------
-
-    curl https://raw.githubusercontent.com/ljank/dotfiles/master/install-on-linux.sh | sh
+    curl https://raw.githubusercontent.com/ljank/dotfiles/master/install-on-osx.sh | bash
 
 TODO
 ========
 
 - stop reinventing the wheel
+- preinstall sublime on linux

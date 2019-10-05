@@ -1,5 +1,33 @@
 [
+    { "keys": ["alt+shift+1"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["alt+shift+2"], "command": "focus_group", "args": { "group": 1 } },
+    { "keys": ["alt+shift+3"], "command": "focus_group", "args": { "group": 2 } },
+    { "keys": ["alt+shift+4"], "command": "focus_group", "args": { "group": 3 } },
+
     { "keys": ["ctrl+t"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-    { "keys": ["super+'"], "command": "change_quotes" },
+    { "keys": ["ctrl+'"], "command": "change_quotes" },
+    { "keys": ["f2"], "command": "side_bar_rename" },
     { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+o"], "command": "goto_definition" },
+
+    { "keys": ["ctrl+g"], "command": "find_next" },
+    { "keys": ["ctrl+alt+g"], "command": "find_prev" },
+
+    { "keys": ["ctrl+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+    { "keys": ["ctrl+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+
+    { "keys": ["ctrl+alt+up"], "command": "swap_line_up" },
+    { "keys": ["ctrl+alt+down"], "command": "swap_line_down" },
+
+    // Select text between brackets
+    { "keys": ["ctrl+alt+a"], "command": "bh_key", "args": {"lines" : true, "plugin": {"type": ["__all__"], "command": "bh_modules.bracketselect"} } },
+
+    // Select tag name of HTML/XML tag (both opening name and closing)
+    { "keys": ["ctrl+alt+t"], "command": "bh_key", "args": {"plugin": {"type": ["cfml", "html", "angle"], "command": "bh_modules.tagnameselect"} } },
+
+    // Toggle high visibility mode
+    { "keys": ["alt+super+="], "command": "bh_toggle_high_visibility"},
+
+    { "keys": ["alt+shift+d"], "command": "table_editor_delete_column"},
+    { "keys": ["alt+shift+a"], "command": "table_editor_insert_column"},
 ]

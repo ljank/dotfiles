@@ -15,6 +15,8 @@ case $(uname) in
     SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
     brew install wget git bash-completion
+
+    grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
     ;;
   *)
     error "Your operating system ($(uname)) is not supported :("
@@ -47,10 +49,9 @@ function setup_sublime {
 }
 
 function setup_bash {
-  BASH_PROFILE_PATH=~/.bash_profile
   echo 'Configuring Bash..'
   for bash_config in $DOT_HOME/bash/*.bash; do
-    grep $bash_config $BASH_PROFILE_PATH || echo "source \"$bash_config\"" >> $BASH_PROFILE_PATH
+    grep $bash_config ~/.bashrc || echo "source \"$bash_config\"" >> ~/.bashrc
   done
   echo 'Bash configured.'
 }

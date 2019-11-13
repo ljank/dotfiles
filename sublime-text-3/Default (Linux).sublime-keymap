@@ -7,7 +7,7 @@
     { "keys": ["ctrl+t"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
     { "keys": ["ctrl+'"], "command": "change_quotes" },
     { "keys": ["f2"], "command": "side_bar_rename" },
-    { "keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+alt+x"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     { "keys": ["ctrl+o"], "command": "goto_definition" },
 
     { "keys": ["ctrl+g"], "command": "find_next" },

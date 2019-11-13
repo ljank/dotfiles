@@ -9,12 +9,12 @@ case $(uname) in
   'Linux')
     SUBLIME_PATH="$HOME/.config/sublime-text-3"
 
-    sudo apt-get install wget git bash-completion
+    sudo apt-get install wget git bash-completion jq silversearcher-ag clang tree vagrant virtualbox
     ;;
   'Darwin')
     SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
-    brew install wget git bash-completion
+    brew install wget git bash-completion jq the_silver_searcher
 
     grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
     ;;

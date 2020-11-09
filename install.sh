@@ -14,7 +14,11 @@ case $(uname) in
   'Darwin')
     SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
-    brew install wget git bash-completion jq the_silver_searcher
+    which wget || brew install wget
+		which git || brew install git
+    which jq || brew install jq
+    which ag || brew install ag
+    which bat || brew install bat
 
     grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
     ;;

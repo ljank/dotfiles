@@ -4,3 +4,4 @@ export EDITOR=vim
 export HISTCONTROL=ignoreboth
 
 alias pong="ping 8.8.8.8"
+alias less=bat

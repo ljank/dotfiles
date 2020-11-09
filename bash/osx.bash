@@ -15,3 +15,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
   ssh-add -K
 fi
+
+alias flush-dns='sudo killall -HUP mDNSResponder'

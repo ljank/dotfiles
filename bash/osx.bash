@@ -10,7 +10,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
   launchctl setenv PATH $PATH
 
-  alias sublime="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+  alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
   defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
   ssh-add -K

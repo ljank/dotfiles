@@ -24,7 +24,7 @@ case $(uname) in
     brew install libsodium
     which VirtualBox || brew install --cask virtualbox
     # Vagrant is compatible only with Intel architecture
-    uname -m | grep --silent x86_64 && which vagrant || brew install --cask vagrant
+    uname -m | grep --silent x86_64 && (which vagrant || brew install --cask vagrant) || echo 'Skipping Vagrant installation on non-Intel architecture'
     which docker || brew install --cask docker
     which starship || brew install starship
 

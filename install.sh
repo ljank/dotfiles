@@ -23,7 +23,8 @@ case $(uname) in
     brew install git; brew link git
     brew install libsodium
     which VirtualBox || brew install --cask virtualbox
-    which vagrant || brew install --cask vagrant
+    # Vagrant is compatible only with Intel architecture
+    uname -m | grep --silent x86_64 && which vagrant || brew install --cask vagrant
     which docker || brew install --cask docker
     which starship || brew install starship
 

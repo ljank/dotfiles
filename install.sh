@@ -6,12 +6,12 @@ DOT_HOME="$HOME/dotfiles"
 
 case $(uname) in
   'Linux')
-    SUBLIME_PATH="$HOME/.config/sublime-text-3"
+    SUBLIME_PATH="$HOME/.config/sublime-text-4"
 
     sudo apt-get install wget git bash-completion jq silversearcher-ag clang tree vagrant virtualbox
     ;;
   'Darwin')
-    SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
+    SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text"
 
     which wget || brew install wget
     which jq || brew install jq
@@ -44,7 +44,7 @@ function setup_sublime {
   if [[ -e $SUBLIME_PATH ]]; then
     echo "Configuring Sublime.."
     rm -frv "$SUBLIME_PATH/Packages/User"
-    ln -sv "$DOT_HOME/sublime-text-3/" "$SUBLIME_PATH/Packages/User"
+    ln -sv "$DOT_HOME/sublime-text-4/" "$SUBLIME_PATH/Packages/User"
 
     PACKAGE_CONTROL_PKG="$SUBLIME_PATH/Installed Packages/Package Control.sublime-package"
     if [[ ! -e "$PACKAGE_CONTROL_PKG" ]]; then

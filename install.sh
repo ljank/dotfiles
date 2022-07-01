@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
-set -x
+set -eux
 
 DOT_HOME="$HOME/dotfiles"
 
@@ -15,10 +14,18 @@ case $(uname) in
     SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text 3"
 
     which wget || brew install wget
-		which git || brew install git
     which jq || brew install jq
     which ag || brew install ag
     which bat || brew install bat
+    which cmake || brew install cmake
+    brew install bash-completion
+    brew install homebrew/cask-fonts/font-fira-code-nerd-font
+    brew install git; brew link git
+    brew install libsodium
+    which VirtualBox || brew install --cask virtualbox
+    which vagrant || brew install --cask vagrant
+    which docker || brew install --cask docker
+    which starship || brew install starship
 
     grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
     ;;

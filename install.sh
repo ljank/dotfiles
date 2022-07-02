@@ -4,15 +4,19 @@ set -eux
 
 DOT_HOME="$HOME/dotfiles"
 
-case $(uname) in
-  'Linux')
-    SUBLIME_PATH="$HOME/.config/sublime-text-4"
+function checkout_dotfiles {
+  if [[ ! -e "$DOT_HOME" ]]; then
+    git clone git@github.com:ljank/dotfiles.git "$DOT_HOME"
+  fi
+}
 
+function install_packages {
+  case $(uname) in
+  'Linux')
     sudo apt-get install wget git bash-completion jq silversearcher-ag clang tree vagrant virtualbox
     ;;
-  'Darwin')
-    SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text"
 
+  'Darwin')
     which wget || brew install wget
     which jq || brew install jq
     which ag || brew install ag
@@ -22,27 +26,28 @@ case $(uname) in
     brew install homebrew/cask-fonts/font-fira-code-nerd-font
     brew install git; brew link git
     brew install libsodium
-    which VirtualBox || brew install --cask virtualbox
-    # Vagrant is compatible only with Intel architecture
-    uname -m | grep --silent x86_64 && (which vagrant || brew install --cask vagrant) || echo 'Skipping Vagrant installation on non-Intel architecture'
     which docker || brew install --cask docker
     which starship || brew install starship
 
-    grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
+    if [[ uname -m | grep --silent x86_64 ]]; then
+      which VirtualBox || brew install --cask virtualbox
+      which vagrant || brew install --cask vagrant
+    fi
     ;;
-  *)
-    error "Your operating system ($(uname)) is not supported :("
-    ;;
-esac
-
-function checkout_dotfiles {
-  if [[ ! -e $DOT_HOME ]]; then
-    git clone git@github.com:ljank/dotfiles.git $DOT_HOME
-  fi
+  esac
 }
 
-function setup_sublime {
-  if [[ -e $SUBLIME_PATH ]]; then
+function setup_sublime_text {
+  case $(uname) in
+    'Linux')
+      SUBLIME_PATH="$HOME/.config/sublime-text-4"
+      ;;
+    'Darwin')
+      SUBLIME_PATH="$HOME/Library/Application Support/Sublime Text"
+      ;;
+  esac
+
+  if [[ -z "$SUBLIME_PATH" && -e "$SUBLIME_PATH" ]]; then
     echo "Configuring Sublime.."
     rm -frv "$SUBLIME_PATH/Packages/User"
     ln -sv "$DOT_HOME/sublime-text-4/" "$SUBLIME_PATH/Packages/User"
@@ -65,6 +70,7 @@ function setup_bash {
   for bash_config in $DOT_HOME/bash/*.bash; do
     grep $bash_config ~/.bashrc || echo "source \"$bash_config\"" >> ~/.bashrc
   done
+  grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
   echo 'Bash configured.'
 }
 
@@ -76,7 +82,8 @@ function setup_git {
 }
 
 checkout_dotfiles &&
-  setup_sublime &&
+  install_packages &&
+  setup_sublime_text &&
   setup_bash &&
   setup_git &&
   echo 'Done!'

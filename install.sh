@@ -29,7 +29,7 @@ function install_packages {
     which docker || brew install --cask docker
     which starship || brew install starship
 
-    if [[ uname -m | grep --silent x86_64 ]]; then
+    if uname -m | grep --silent x86_64; then
       which VirtualBox || brew install --cask virtualbox
       which vagrant || brew install --cask vagrant
     fi

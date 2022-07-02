@@ -47,7 +47,7 @@ function setup_sublime_text {
       ;;
   esac
 
-  if [[ -z "$SUBLIME_PATH" && -e "$SUBLIME_PATH" ]]; then
+  if [[ ! -z "$SUBLIME_PATH" && -e "$SUBLIME_PATH" ]]; then
     echo "Configuring Sublime.."
     rm -frv "$SUBLIME_PATH/Packages/User"
     ln -sv "$DOT_HOME/sublime-text-4/" "$SUBLIME_PATH/Packages/User"
@@ -68,9 +68,9 @@ function setup_sublime_text {
 function setup_bash {
   echo 'Configuring Bash..'
   for bash_config in $DOT_HOME/bash/*.bash; do
-    grep $bash_config ~/.bashrc || echo "source \"$bash_config\"" >> ~/.bashrc
+    grep --silent $bash_config ~/.bashrc || echo "source \"$bash_config\"" >> ~/.bashrc
   done
-  grep "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
+  grep --silent "bashrc" ~/.bash_profile || echo "test -f ~/.bashrc && source ~/.bashrc" >> ~/.bash_profile
   echo 'Bash configured.'
 }
 
